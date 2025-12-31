@@ -1,0 +1,384 @@
+/*CSS VARIABLES (THEME COLORS)*/
+:root {
+  --bg: #0b0f1a;
+  --card: #12172a;
+  --muted: #9aa3b2;
+  --text: #e9ecf1;
+  --accent: #6cf2c2;
+  --accent2: #6aa6ff;
+}
+/* Profile picture styling */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(108, 242, 194, 0.4);
+}
+
+
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: linear-gradient(180deg, #0b0f1a, #0e1430);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
+/*LAYOUT SECTIONS */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.glass-header {
+  max-width: 900px;          /* FIX: control width */
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+section {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+footer {
+  padding: 30px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+
+/* TYPOGRAPHY*/
+h1 {
+  font-size: 44px;
+  margin: 14px 0 8px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 10px 0 6px;
+  position: relative;
+}
+
+/* Accent underline for section headings 
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 4px;
+}
+*/
+h3 {
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+ul {
+  padding-left: 18px;
+}
+
+
+/*  COMPONENTS */
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(108, 242, 194, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid #202863;
+  border-radius: 14px;
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover animation */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* BUTTONS */
+.cta {
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  min-width: 160px;
+}
+.badge {
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: transparent;
+  color:var(--text);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 1px solid #24306f;
+
+}
+
+.btn:hover{
+    background: #36b389c2;
+}
+
+.btn.alt {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #2b335a;
+  transition: all 0.3s ease;
+}
+
+.btn.alt:hover {
+  border-color: #36b389;
+  color: var(--accent);
+}
+
+/* Resume view button */
+.btn.alt {
+  border: 1px dashed #3a4599; 
+}
+
+
+/*  GRID SYSTEM*/
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.cols-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+
+/*SKILLS TAGS*/
+.skills span {
+  display: inline-block;  
+  margin: 6px 6px 0 0;
+  padding: 10px;
+  border-radius: 999px;
+  background: #151c3f;
+  border: 1px solid #24306f;
+
+}
+.skills.span:horizontal{
+    rotate: var(--accent);
+}
+
+
+/*ANIMATIONS */
+section {
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== PROFILE PICTURE CONTAINER ===== */
+/* Center profile picture inside header */
+.profile-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  background: var(--bg);
+}
+/* ===== GRADIENT RING ===== */
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent2),
+    var(--accent)
+  );
+  z-index: 1;
+}
+
+/* Typing subtitle */
+#typing-text {
+  display: inline-block;
+  border-right: 2px solid var(--accent);
+  padding-right: 6px;
+  animation: blinkCursor 0.8s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ===== RING ANIMATION ===== */
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== ONLINE STATUS DOT ===== */
+.status-dot {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  z-index: 3;
+}
+
+/* ===== HOVER EFFECT ===== */
+.profile-wrapper:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .profile-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* ===== GLASSMORPHISM HEADER ===== */
+/*
+.glass-header {
+  background: rgba(18, 23, 42, 0.55);   /* semi-transparent 
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+} 
+*/
+/* Slight glow on hover */
+.glass-header:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+
+/*PROJECT-SPECIFIC STYLING */
+#projects .card .card {
+  border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#experience .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#certifications .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#skills .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#about .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#contact .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+#technical_skills .card .card{
+    border: 1px solid rgba(108, 242, 194, 0.35);
+}
+
+.project-card {
+  margin-top: 20px;
+}
+
+h1 {
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 700px;     /* FIX: limit line length */
+  margin: 0 auto 28px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+} 
+

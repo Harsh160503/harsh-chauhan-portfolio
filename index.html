@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Chauhan | Computer Science Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="glass-header">
+
+    <!-- Profile Picture Wrapper -->
+    <div class="profile-wrapper">
+      <span class="status-dot"></span>
+      <img src="profile.png" alt="Harsh Chauhan Profile Picture" class="profile-pic">
+    </div>
+
+    <span class="badge">Full Stack Web Developer</span>
+    <h1>Harsh Chauhan</h1>
+
+    
+        <p class="subtitle">
+  <span id="typing-text"></span>
+</p>
+<script>
+  const text =
+    "B.Tech Computer Science Engineering fresher with strong foundations in full-stack development and a passion for building scalable, real-world software solutions.";
+
+  const speed = 40; // typing speed (ms)
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing-text").textContent += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  window.addEventListener("load", typeEffect);
+</script>
+
+
+    <div class="cta">
+      <a class="btn alt" href="#projects">View Projects</a>
+      <a class="btn alt" href="resume.pdf" target="_blank">View Resume (PDF)</a>
+      <a class="btn alt linkedin-btn"
+         href="https://www.linkedin.com/in/harsh-chauhan222"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+       <a class="btn" href="#contact">Contact Me</a>
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- ABOUT & EDUCATION -->
+  <section id="about" class="grid cols-2">
+    <div class="card">
+      <h2>About Me</h2>
+      <p class="muted">
+        I am a Computer Science Engineering graduate with four years of academic training in software
+         development, data structures, and full-stack web technologies. I have hands-on experience in 
+         building web applications using HTML, CSS, JavaScript, React, Node.js, Express, 
+         and MongoDB, with a strong understanding of RESTful APIs and authentication systems. </p>
+         <p class="muted">
+         During my academic projects, I developed scalable and user-centric solutions such 
+         as a Smart City Complaint & Service Portal, where I worked on front-end development, 
+         backend APIs, database design, and role-based access control. These projects 
+         strengthened my problem-solving skills and understanding of the software development lifecycle.</p>
+
+         
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <div class="card" style="margin-top:16px">
+        <p><strong>CDLSIET</strong><BR>
+        <strong>B.Tech 4th Year– Computer Science Engineering</strong>
+        <br/>2023–2026
+      <br>  CGPA - 7.0
+    </p>
+      <p><strong>Government Polytechnic Sonipat</strong><br>
+      <strong>Diploma Computer Science Engineering</strong>
+    <br>2021-2023<br>
+    63%
+  </p>
+<p><strong>12th  HBSE Board</strong><br>
+    2019-2021<br>
+    86%
+  </p></div>
+      
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="grid cols-2">
+    <div class="card">
+    <h2>Skills</h2>
+    <div class="card" style="margin-top:16px">
+    <div class="skills">
+      <br>
+      <span>JavaScript</span>
+      <span>HTML/CSS</span>
+      <span>Node.js</span>
+      <span>Problem-Solving</span>
+      <span>Team Mangement</span>
+    </div>
+    </div>
+</div>
+</section>
+
+<!--Technical Skill-->
+  <section id="technical_skills">
+<div class="card">
+  <h2>Technical Skills</h2>
+  <div class="card" style="margin-top:16px">
+    <ul>
+    <li><strong>Programming Languages:</strong> JavaScript, C++ (Basics)</li>
+    <li><strong>Web Technologies:</strong> HTML, CSS, React</li>
+    <li><strong>Backend:</strong> Node.js</li>
+    <li><strong>Database:</strong> MongoDB (Basics)</li>
+    <li><strong>Tools:</strong> VS Code , Git (learning)</li>
+  </ul>
+</div>  
+</div>
+ </section>
+
+  <!-- PROJECT SECTION -->
+  <section id="projects">
+    <div class="card" >
+  <h2>My Projects</h2>
+  
+  <!-- Project 1 -->
+  <div class="card project-card">
+    <h3>Smart City Complaint & Service Portal</h3>
+
+    <p class="muted">
+      A full-stack platform enabling citizens to register and track complaints
+      with admin dashboards and analytics.
+    </p>
+
+    <p class="muted"><strong>Key Features:</strong></p>
+    <ul class="muted">
+      <li>User authentication</li>
+      <li>Real-time status tracking</li>
+      <li>Admin & department dashboards</li>
+      <li>Analytics & reports</li>
+    </ul>
+
+    <p class="muted">
+      <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB
+    </p>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="card project-card">
+    <h3>E-Commerce Website</h3>
+
+    <p class="muted">
+      A responsive e-commerce web application that allows users to browse products,
+      add items to cart, and place orders through a smooth checkout experience.
+    </p>
+
+    <p class="muted"><strong>Key Features:</strong></p>
+    <ul class="muted">
+      <li>User registration and login</li>
+      <li>Product listing and search</li>
+      <li>Shopping cart and order management</li>
+      <li>Secure checkout flow</li>
+    </ul>
+
+    <p class="muted">
+      <strong>Tech Stack:</strong> HTML, CSS, JavaScript, React, Node.js, MongoDB
+    </p>
+  </div>
+
+
+</section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <div class="card">
+    <h2>Experience</h2>
+
+    <div class="card" style="margin-top:16px">
+<h4>Software Engineering Intern</h4>
+  <ul class="muted">
+    <p>
+      <li>  Backend APIs & database integration </li>
+      <li>  Authentication & role-based access </li>
+  </p>
+  </ul>
+  <h4>Web Development Intern</h4>
+  <ul class="muted">
+    <p><li> 2 Month Internship at Codec Technologies </li></p>
+
+   </ul> 
+  </div>
+</div>
+  </section>
+
+  <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+  <section id="certifications">
+<div class="card">
+  <h2>Certifications & Achievements</h2>
+  <br>
+  <div class="card" style="margin-top:16px">
+  <h4>Web Development Internship</h4>
+
+  <ul class="muted">
+  <p> – Codec Technologies  
+      <br />
+
+      Gained hands-on experience in frontend and backend development.</p>
+    
+  </ul>
+  <!-- Full stack training / certification -->
+   <h4>Full Stack Web Development</h4>
+   <ul class="muted"><p> – Academic / Online Training  
+      <br />
+
+    Worked with HTML, CSS, JavaScript, React, Node.js .</p>
+
+    </ul>
+      <h3> Academic Project</h3>
+      <ul class="muted">
+      
+        <p> – Smart City Complaint & Service Portal  <br>
+      Designed and implemented a real-world full-stack application as part of coursework.</p>
+  
+      </ul>
+  </div>
+  </div>
+    
+</section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" >
+    <div class="card">
+    <h2>Contact</h2>
+    <div class="card" style="margin-top:16px">
+      <p>Email:
+     <a href="mailto:harshchauhani115@gmail.com">harshchauhani115@gmail.com</a>
+    </p>
+    <p>
+  Resume:
+  <a href="resume.pdf"Download>Download PDF</a>
+</p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/harsh-chauhan222" target="_blank">
+        linkedin.com/in/harsh-chauhan222
+      </a>
+    </p>
+ </div>
+</div>
+     </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Harsh Chauhan · Portfolio
+  </footer>
+
+</body>
+</html>
