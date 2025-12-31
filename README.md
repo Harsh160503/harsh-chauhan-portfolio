@@ -3,7 +3,7 @@
 This is my personal portfolio website showcasing my skills, projects, and experience as a **Computer Science Engineering student and Full Stack Web Developer**.
 
 ## 🌐 Live Website
-👉 https://harsH8950.github.io/harsh-chauhan-portfolio
+👉 https://Harsh160503.github.io/harsh-chauhan-portfolio
 
 ## 📌 Features
 - Responsive modern UI
